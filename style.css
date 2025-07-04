@@ -1,198 +1,214 @@
 :root {
-    --orange-color: #da722c;
-    --dark-blue-color: #023047;
-    --dark-color: #070917;
-    --light-color: hsl(193, 70%, 95%);
-    --light-blue-color: #6f7dfb;
-    
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
 }
+
 *,
 *::after,
-*::before{
-  box-sizing: border-box;  
+*::before {
+  box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    font-family: "Poppinos", sans-serif;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.wrapper{
-    max-width: 1134px;
-    margin: 0 auto;
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
 }
 
-.btn{
-    padding: 16px 32px;
-    border-radius: 24px;
-    color:#fff ;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-    position:relative ;
+/* Buttons */
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
 }
 
-.btn.dark{
-    background: var(--dark-blue-color);
+.btn.dark {
+  background: var(--dark-blue-color);
 }
 
-.btn.light{
-    background: var(--orange-color);
+.btn.light {
+  background: var(--orange-color);
 }
 
-.btn.enrol-icon::before 
-{
-    content: url(Imagens/enrol-icon.svg);
-    position: absolute;
-    top:50%;
-    left: 32px;
-    transform:translateY(-50%);
+.btn.enrol-icon::before {
+  content: url("images/enrol-now-icon.svg");
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
 }
 
-.btn.enrol-icon{
-    padding-left: 60px;
+.btn.enrol-icon {
+  padding-left: 60px;
 }
 
-header{
-    background:linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
-    height: 100vh;
-    width: 100%;
+/* Header */
+
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 1134 px;
-    top: 36px;
-    z-index: 100;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 0;
+  padding: 36px 0;
+  z-index: 100;
+  transition: all 500ms ease;
 }
 
-nav.logo{
-    font-family:"Poppins", sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    color: #FFFFFF;
-    
+nav .scrolled {
+  background: var(--dark-color);
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
 }
 
-nav ul{
-    display: flex;/*Deixa a palavra uma na frente da outra*/
-    align-items: center;
-    gap:60px ; /*espaço entre as palavras*/
-    list-style: none ; /*Tira os pontos da frente da palavra*/
-    margin: 0;
+nav .logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
 }
 
 nav ul li a {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color:#FFFFFF;
-    text-decoration :none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.hero-section{
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 60px; 
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  position: relative;
+  color: #fff;
 }
 
-.hero-section .left h1{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 50px;
-    line-height: 125%;
-    color: #FFFFFF;
-    margin-bottom: 0;
+.hero-section .left h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 125%;
+  margin-bottom: 0;
 }
 
-.hero-section .left p{
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 200%;
-    color: #FFFFFF;
-    margin-bottom: 30px;
-    width: 457px;
+.hero-section .left p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+  margin-bottom: 30px;
+  width: 457px;
 }
 
-
-.hero-section .left{
-    flex: 1;
-}
-    
-
-.hero-section .right{
-    align-self: flex-end;
+.hero-section .left {
+  flex: 1;
 }
 
-.hero-section .right img{
-    height: 520px; /*tamanho da imagem*/
-    vertical-align: middle;
+.hero-section .right {
+  align-self: flex-end;
 }
 
-.anchievement-card{
-    position: absolute;
-    min-width:200px;
+.hero-section .right img {
+  height: 520px;
+  vertical-align: middle;
 }
 
-.anchievement-card .content{
-    border-radius: 24px;
-    background: #fff;
-    padding: 8px 32px;
-    z-index: 10;
-    position:relative;
+/* Achievement Cards */
+
+.achievement-card {
+  position: absolute;
+  min-width: 200px;
+  color: var(--dark-blue-color);
 }
 
-.anchievement-card.students-enrolled{
-    left: 49px;
-    top: 270px;
+.achievement-card .content {
+  border-radius: 24px;
+  background: #fff;
+  padding: 8px 32px;
+  z-index: 10;
+  position: relative;
 }
 
-.anchievement-card.overall-rating{
-    left:47px;
-    top:470px;
+.achievement-card.students-enrolled {
+  left: 49%;
+  top: 270px;
 }
 
-.anchievement-card .content div{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.achievement-card.overall-rating {
+  left: 47%;
+  top: 470px;
 }
 
-.anchievement-card h3{
-    font-family: "Popions", sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: var(--dark-blue-color);
-    margin: 0;
-    text-align: center;
-    width: 100%;
+.achievement-card .content div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.anchievement-card p{
-    font-family: "Popions", sans-serif;
-    font-weight:normal;
-    font-size: 16px;
-    color: var(--dark-blue-color);
-    margin-top: -8px;
-    margin-bottom: 8px;
+.achievement-card h3 {
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  flex: 1;
 }
 
-.anchievement-card .bg{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
-    border-radius: 24px;
-    top: 8px;
-    left: 8px;
-    z-index: 1;
+.achievement-card img {
+  flex: 1;
+  height: 42px;
+  margin-left: -24px;
+}
+
+.achievement-card p {
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.achievement-card .bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  border-radius: 24px;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
 }
